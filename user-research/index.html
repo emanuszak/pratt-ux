@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>User Research | Pratt UX Mobile Design</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="css/mobile.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<section class="panel front col-unwrap" data-section-name="intro">
+		<div class="logo"><img src="img/logo-dnainfo.svg"></div>
+		<h1>community volunteering platform</h1>
+	</section>
+	<section class="panel second" data-section-name="goals">
+		<h2>Project Goals</h2>
+		<div class="text-wrap">
+			<p>Design a new product for DNAinfo to help users connect with their neighborhoods through local volunteer opportunities.</p>
+		</div>
+	</section>
+	<section class="panel third" data-section-name="problem">
+		<h2>Problem Definition</h2>
+		<div class="text-wrap">
+			<p>
+			<p>Interest to volunteer and do social good in the community tends to surge around events&ndash;holidays, this year's presidential election, natural disasters, etc.</p>
+			<p>Volunteers, however, rely on word-of-mouth and broad internet searches to find organizations that fit their causes, showing that there is no clear-cut destination for volunteer opportunities.  This means users spend significant time digging through search results and vetting organizations instead of participating in volunteer activities.</p>
+			<cite>http://www.dailykos.com/story/2016/11/17/1600883/-Progressive-organizations-see-a-surge-in-donations-and-volunteers-after-Trump-s-election</cite>
+		</div>
+	</section>
+		<article class=" panel third-1" data-section-name="validation">
+		<h3>Problem Validation</h3>
+			<div class="text-wrap">
+				<div class="row graph">
+				<script type="text/javascript" src="//ssl.gstatic.com/trends_nrtr/925_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/080gm","geo":"US-NY-501","time":"2016-01-01 2017-03-03"}],"category":0,"property":""}, {"exploreQuery":"date=2016-01-01%202017-03-03&geo=US-NY-501&q=%2Fm%2F080gm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+
+				</div>
+				<div class="row">
+					<div class="graph--small">
+						<script type="text/javascript" src="//ssl.gstatic.com/trends_nrtr/925_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_TOPICS", {"comparisonItem":[{"keyword":"/m/080gm","geo":"US-NY-501","time":"2016-01-01 2017-03-03"}],"category":0,"property":""}, {"exploreQuery":"date=2016-01-01%202017-03-03&geo=US-NY-501&q=%2Fm%2F080gm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+					</div>
+					<div class="graph--small">
+						<script type="text/javascript" src="//ssl.gstatic.com/trends_nrtr/925_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"/m/080gm","geo":"US-NY-501","time":"2016-01-01 2017-03-03"}],"category":0,"property":""}, {"exploreQuery":"date=2016-01-01%202017-03-03&geo=US-NY-501&q=%2Fm%2F080gm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+					</div>
+				</div>
+			</div>
+		</article>
+	<section class="panel fourth" data-section-name="audience">
+		<h2>Target Audience</h2>
+		<div class="text-wrap">
+			<p>College-educated professionals in South Brooklyn (Downtown Brooklyn, Carroll Gardens, Cobble Hill, Gowanus, Park Slope, Red Hook), age 20-40, recent or renewed interested in social good but does not identify as an activist.</p>
+		</div>
+	</section>
+	<section class="panel fifth col-unwrap" data-section-name="research">
+		<h2 class="top">Research</h2>
+		<div class="row">
+			<div class="col-2">
+				<h3>Objectives</h3>
+				<ul class="bulleted">
+					<li>Validate the problem by understanding points of friction users experience when looking for volunteer opportunities</li>
+					<li>Define audience needs and expectations in a volunteer search</li>
+					<li>Discover the role of mobile phone usage with the audience, particularly in conducting online research</li>
+				</ul>
+			</div>
+			<div class="col-2">
+				<h3>Methods</h3>
+				<ul class="bulleted">
+					<li>Competitive Analysis</li>
+					<li>Interviews</li>
+					<li>Usability Testing</li>
+			</div>
+		</div>
+	</section>
+		<article class="panel fifth-1 col-unwrap" data-section-name="competition">
+			<h3 class="top">Competitive Analysis</h3>
+			<div class="row">
+				<div class="col-3">
+					<div class="screenshot">
+						<img src="img/landing-page_taproot.png">
+					</div>
+					<div>
+						<h4>Taproot</h4>
+						<p>connects nonprofits and social change organizations with passionate, skilled volunteers who share their expertise pro bono</p>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="screenshot">
+						<img src="img/landing-page_catchafire.png">
+					</div>
+					<div>
+						<h4>Catchafire</h4>
+						<p>provides talented individuals with meaningful pro bono experiences in order to build capacity for social good organizations</p>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="screenshot">
+						<img src="img/landing-page_volunteermatch.png">
+					</div>
+					<div>
+						<h4>Volunteer Match</h4>
+						<p>connect people who want to change the world together</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article class="panel fifth-2" data-section-name="competition-2">
+			<table class="data">
+					<tr class="table--head">
+						<th><span class="invisible">Site</span></th>
+						<th>Taproot</th>
+						<th>Catchafire</th>
+						<th>Volunteer Match</th>
+					</tr>
+					<tr class="row-1">
+						<th>long- and short-term projects</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+					</tr>
+					<tr class="row-2">
+						<th>requires specific skills/expertise</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="no"></td>
+					</tr>
+					<tr class="row-3">
+						<th>unique application process</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="no"></td>
+					</tr>
+					<tr class="row-4">
+						<th>remote and local opportunities</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+					</tr>
+					<tr class="row-5">
+						<th>streamlined sign-up</th>
+						<td data-table-value="no"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+					</tr>
+					<tr class="row-6">
+						<th>customized recommendations</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+					</tr>
+					<tr class="row-7">
+						<th>personal profile</th>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+						<td data-table-value="yes"></td>
+					</tr>
+			</table>
+		</article>
+		<article class="panel fifth-3" data-section-name="interviews">
+			<h3>Interviews</h3>
+		</article>
+		<article class="panel fifth-4 col-unwrap" data-section-name="affinity">
+			<h3>Interview Insights</h3>
+			<div class="row">
+				<div class="col-4">
+					<h4>Behaviors</h4>
+					<ul class="cards">
+						<li>users search by highly individual interests</li>
+						<li>activities requiring research are done on desktop, not mobile</li>
+						<li>mainly use mobile for browsing and simple tasks</li>
+						<li>increased motivation when something affects the community</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h4>Channels</h4>
+					<ul class="cards">
+						<li>high Facebook usage</li>
+						<li>word-of-mouth referrals</li>
+						<li>internet searches</li>
+						<li>marketing from organizations</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h4>Challenges</h4>
+					<ul class="cards">
+						<li>tendency to be passive over active about volunteer opportunities</li>
+						<li>motivation is fleeting, often time-sensitive</li>
+						<li>inconsistent communication from organization</li>
+					</ul>
+				</div>
+				<div class="col-4">
+					<h4>Pain Points</h4>
+					<ul class="cards">
+						<li>forms on mobile are cumbersome</li>
+						<li>large time investment researching for opportunities</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+		<article class="panel sixth" data-section-name="opportunities">
+			<h3>Product Opportunities</h3>
+			<div class="text-wrap">
+				<p>Based on the conducted research, there are opportunities to reduce the amount of friction experienced for users signing up for events on mobile devices, and to help surface volunteer activities for users so they can spend less time searching on their own.</p>
+			</div>
+		</article>
+	<section class="panel seventh" data-section-name="framework">
+		<h2>Feature Framework</h2>
+		<div class="text-wrap">
+				<p>The proposed initial feature will provide a streamlined list of search results intended for quick browsing, and one-click signup/registration using social network authentication (Facebook and Google).  After registering the user has the option to complete a profile to receive personalized recommendations for future volunteering.</p>
+				<p>Secondary features could include calendar integration and feedback on the organization and volunteer experience.</p>
+		</div>
+	</section>
+		<article class="panel seventh-1" data-section-name="archetypes">
+			<h3>User Archetypes</h3>
+		</article>
+			<article class="panel seventh-1a" data-section-name="volunteer">
+				<div class="archetype--profile">
+					<h3>The Active Volunteer</h3>
+					<div class="archetype--img">
+						<svg>
+							<use xlink:href="img/archetype-svg-sprite.svg#001-punk-young-head"></use>
+						</svg>
+						<cite>designed by Freepik from Flaticon</cite>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-2">
+						<h4>Traits</h4>
+						<ul>
+							<li>Dedicated to volunteering on a consistent basis, perhaps once or twice a month</li>
+							<li>Proactive in seeking volunteer activities in their spare time</li>
+							<li>Motivation is closely tied to causes they care about</li>
+							<li>Open to doing a range of volunteer activities, as long as the organization fits their personal beliefs</li>
+						</ul>
+					</div>
+					<div class="col-2">
+						<h4>Needs</h4>
+						<ul>
+							<li>Sift through opportunities quickly</li>
+							<li>Easily identify relevant listings</li>
+							<li>More uniform way of reaching out/applying for volunteer opportunities</li>
+							<li>Better insight into the organization</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article class="panel seventh-1b" data-section-name="passive">
+				<div class="archetype--profile">
+					<h3>The Passive Participant</h3>
+					<div class="archetype--img">
+						<svg>
+							<use xlink:href="img/archetype-svg-sprite.svg#003-person-face-close-up"></use>
+						</svg>
+						<cite>designed by Freepik from Flaticon</cite>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-2">
+						<h4>Traits</h4>
+						<ul>
+							<li>May volunteer once or twice a year at most</li>
+							<li>Open to learning about opportunities from friends or Facebook but does not seek out volunteering on their own</li>
+							<li>Convenience or reward as a primary motivator</li>
+							<li>Typically driven by a catalyst to volunteer, such as an event</li>
+							<li>Susceptible to peer-pressure or social validation</li>
+						</ul>
+					</div>
+					<div class="col-2">
+						<h4>Needs</h4>
+						<ul>
+							<li>Volunteer opportunity must be presented to or surfaced for them</li>
+							<li>Quick and easy signup process</li>
+							<li>Activities must fit with their schedule</li>
+						</ul>
+					</div>
+				</div>
+			</article>
+		<article class="panel seventh-2" data-section-name="principles">
+			<h3>Design Principles</h3>
+			<div class="text-wrap">
+				<ul>
+					<li>Be considerate of users' time</li>
+					<li>Be accessible</li>
+					<li>Bite-sized</li>
+					<li>Conversational but not at the sake of being informative</li>
+					<li>Nothing exists in a vacuum</li>
+				</ul>
+			</div>
+		</article>
+	<section class="panel eighth col-unwrap" data-section-name="flows">
+		<h2 class="top">User Flow</h2>
+		<div class="row">
+			<ol class="flow">
+				<li>Open the site on landing page</li>
+				<li>Scrolls to browse interest areas and selects one</li>
+				<li>Scrolls through results, clicks a listing</li>
+				<li>Wants to sign up for opportunity</li>
+				<li>Registers with Google/FB OAuth</li>
+				<li>Confirms signup, opting in to create profile</li>
+				<li>Continues on to complete user profile</li>
+			</ol>
+		</div>
+	</section>
+	<section class="panel ninth col-unwrap" data-section-name="sketches">
+		<h2>Sketches</h2>
+		<div class="row">
+			<div class="col-4 sketch">
+				<img src="img/sketch1.png">
+			</div>
+			<div class="col-4 sketch">
+				<img src="img/sketch2.png">
+			</div>
+			<div class="col-4 sketch">
+				<img src="img/sketch3.png">
+			</div>
+			<div class="col-4 sketch">
+				<img src="img/sketch4.png">
+			</div>
+		</div>
+	</section>
+	<section class="panel tenth" data-section-name="testing">
+		<h2>Testing Solutions</h2>
+		<div class="text-wrap">
+			<p>Create paper or basic digital prototype, and provide users with a set of scenarios and tasks to complete.</p>
+			<p>Observe actions and decision-making, take notes, and then discuss with the user about their experience.</p>
+		</div>
+	</section>
+	<section class="panel eleventh" data-section-name="conclusion">
+		<h2>Conclusions</h2>
+	</section>
+	
+	<footer class="interstitial" data-section-name="footer">
+		<p><a href="http://emanuszak.github.io/pratt-ux/user-research/">http://emanuszak.github.io/pratt-ux/user-research/</a><br>
+		prepared by Ellen Manuszak for Pratt Institute's Certificate Program in UX/UI Mobile Design, Spring 2017</p>
+	</footer>
+		
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="lib/jquery.easing.1.3.js"></script>
+<script src="lib/jquery.scrollify.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
+
