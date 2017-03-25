@@ -1,0 +1,64 @@
+.reveal .slides > section {
+	padding: 0;
+}
+
+.reveal h1 {
+    font-size: 3.5em;
+}
+
+.sitemap img {
+    max-width: 85%;
+}
+
+.reveal section img {
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.reveal blockquote {
+	width: 100%;
+}
+
+section.principles img {
+	width: 20%;
+}
+.solution {
+	perspective: 1000px;
+}
+section.solution img {
+	width: 25%;
+	height: auto;
+	image-rendering: auto;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: rotate(-25deg) skewX(25deg) skewY(25deg);
+	box-shadow: 1px 9px 10px rgba(0,0,0,.5);
+}
+section.journey img {
+	transform: scale(1.1);
+}
+section.persona img {
+	float:left;
+	margin-right: 3%;
+}
+section.persona p {
+	text-align: left;
+}
+section.persona blockquote {
+	clear:both;
+}
+section.wireframes div {
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+	clear:both;
+}
+section.wireframes img {
+	float: left;
+	width: 50%;
+	height: auto;
+}
+section.wireframes p {
+	vertical-align: middle;
+}

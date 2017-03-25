@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>DNA for good</h1>
+					local social good
+				</section>
+				
+				<section>
+					<h2>Problem</h2>
+					<p>Potential volunteers spend significant time <em>researching</em> opportunities instead of <em>participating</em> in volunteer activities.</p>
+				</section>
+				
+				<section>
+					<h2>Discovery</h2>
+					<blockquote>"The search results I want are often buried, so I have to go digging for the exact thing I'm looking for."</blockquote>
+					<blockquote class="fragment">"I know what I want in a signup.  1. sign in with Google; 2. authorize.  Don’t ask for anything else."</blockquote>
+					<blockquote class="fragment">"Filling out forms on the phone sucks."</blockquote>
+				</section>
+				
+				<section class="solution">
+					<h2>Solution</h2>
+						<img class="fragment" data-autoslide="900" src="img/wire_home.png">
+						<img class="fragment" data-autoslide="900" src="img/wire_signup.png">
+						<img class="fragment" src="img/wire_profile1.png">
+				</section>
+				
+				<section>
+					<h2>How we got there</h2>
+				</section>
+				
+				<section class="principles">
+					<h2>guiding principles</h2>
+					<img src="img/003-chips.svg" alt="bite-sized/considerate of users' time">
+					<img src="img/001-maps-and-flags.svg" alt="contextual">
+					<img src="img/004-door-key.svg" alt="accessible">
+					<img src="img/002-emoticon.svg" alt="conversational and friendly">
+				</section>
+				
+				<section class="sitemap">					
+					<h2>Sitemap</h2>
+					<img src="img/sitemap.svg">
+				</section>
+				
+				<section class="persona">
+					<h2>persona: Phillip A.</h2>
+					<img src="img/phillip.png">
+					<div>
+						<p>
+						The Active Volunteer<br>
+						sales manager in enterprise tech<br>
+						38, single</p>
+						<p>tech savvy level: &starf; &starf; &starf; &starf; &star;</p>
+					</div>
+					<blockquote>“Just donating money seems impersonal–hands-on work feels more impactful.”</blockquote>
+				</section>
+				
+				<section class="journey">
+					<h2>journey</h2>
+					<img src="img/journeymap.svg">
+				</section>
+				
+				<section>
+					<h2>Wireframes</h2>
+					<section class="wireframes">
+						<div>
+							<img src="img/navigation.gif">
+							<p><a href="#">discover</a> and <a href="#">search</a> links display a slide down menu</p>
+						</div>
+						<div>
+							<img src="img/social-validation.gif">
+							<p>scroll through real-time updates of sign ups</p>
+						</div>
+					</section>
+					<section class="wireframes">
+						<div>
+							<img src="img/wire_results.png">
+						</div>
+						<div>
+							<img src="img/wire_results-detail.gif">
+							<p>expand to see the listing details</p>
+						</div>
+					</section>
+					<section class="wireframes">
+						<div>
+							<img src="img/wire_signup.png">
+							<p>Google and Facebook oauth</p>
+						</div>
+						<div>
+							<img src="img/wire_dashboard.png">
+							<p>connect to FB/Google contacts to invite</p>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
