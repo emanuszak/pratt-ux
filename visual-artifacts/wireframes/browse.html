@@ -26,53 +26,47 @@
 			<nav class="primary-nav">
 				<ul class="no-bullets">
 					<li><a href="index.html#howitworks">How it works</a></li>
+					<li><a href="browse.html">Find causes</a></li>
 					<li>
 						<input type="checkbox" id="discover">
-						<label for="discover">Find volunteering</label>
+						<label for="discover">Search</label>
 						<div class="modal header-modal">
 							<label for="discover" class="close"><i class="material-icons">close</i></label>
-							<ul class="no-bullets">
-								<li><a href="search.html"><i class="material-icons">search</i>search</a></li>
-								<li><a href="browse.html"><i class="material-icons">view_module</i>browse</a></li>
-							</ul>
+							<section class="search header-search">
+								<input type="search" placeholder="I want to volunteer as...">
+								<button type="submit">Search</button>
+							</section>
 						</div>
 					</li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
-		<main class="signup">
-			<p>Just one step to complete your sign up for:</p>
-			<div class="card-mini-view">
-				<div class="card-details">
-					<h2>Volunteer opportunity title</h2>
-					<h3>Organization</h3>
-					<p>date and time</p>
+		<main>
+			<section class="browse">
+				<h2><span class="code">h2</span>Browse Causes</h2>
+				<div class="grid-wrapper">
+					<ul class="grid no-bullets">
+						<li><a href="results.html"><i class="material-icons">wallpaper</i></a></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+						<li><i class="material-icons">wallpaper</i></li>
+					</ul>
 				</div>
-			</div>
-			<button class="google"><a href="user-dashboard-empty.html">sign up with Google</a></button>
-			<button class="facebook"><a href="user-dashboard-empty.html">sign up with Facebook</a></button>
-			
-			<div class="manual">
-				<p>sign up with your email</p>
-				<div class="manual-account">
-					<form>
-						<label for="username">email:</label>
-							<input type="email" id="username">
-						<label for="password">password (at least 6 characters):</label>	
-							<input type="password" id="password" pattern="{6,}">
-						<button type="submit"><a href="user-dashboard-empty.html">Sign up</a></button>
-					</form>
-				</div>
-			</div>
-
-			<div class="opt-in">
-				<input type="checkbox" id="opt-in" checked>
-				<label for="opt-in">Yes, I want to also create a user profile</label>
-			</div>
-			<p class="disclaimer">by clicking "sign up" you agree to the terms and services of this site</p>
-			<a href="#">cancel signup</a>
+			</section>
+			<section class="search">
+				<label for="search"><h2><span class="code">h2</span>Search for a Cause</span></h2></label>
+				<p>Looking for a specific volunteer role?  Try typing in the activity you want to do e.g. baseball coach or reading buddy.</p>
+				<input type="search" placeholder="I want to volunteer as...">
+				<button type="submit">Go!</button>
+			</section>
 		</main>
 		
 		<footer class="global-footer">

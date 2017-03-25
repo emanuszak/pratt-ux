@@ -7,12 +7,12 @@ body { font: 400 16px/1.5 'Roboto'; color: white; margin: 0; background-color: #
 
 h1, h2, h3, h4 { margin-bottom: 0; font-family: 'Roboto Condensed'; }
 
-.wrapper { background-color: white; width: 375px; margin: 0 auto; margin-bottom: calc(100vh - 660px); min-height: 100vh; color: #333; }
+.wrapper { background-color: white; margin: 0 auto; margin-bottom: calc(100vh - 660px); min-height: 100vh; color: #333; }
 
 ul.no-bullets { padding-left: 0; }
-ul.no-bullets li { list-style: none; padding-left: 0; }
+ul.no-bullets li { list-style: none; }
 
-section { background-color: #eee; padding: 2rem .25rem; }
+section { background-color: #eee; padding: 1rem .25rem; }
 section:nth-child(odd) { background-color: #d5d5d5; }
 section h2 { margin-top: 0; }
 
@@ -29,9 +29,9 @@ button, .cta-button { margin: 0 auto; display: block; text-align: center; color:
 
 .primary-nav li, .login-nav li { display: inline-block; }
 
-.primary-nav { background-color: #eee; font: 1.2rem 'Roboto Condensed'; }
-.primary-nav ul { display: flex; justify-content: space-between; align-content: center; align-items: center; margin: 0 auto; }
-.primary-nav li { flex: 1 1 auto; padding: 1rem 0; text-align: center; }
+.primary-nav { background-color: #eee; font: 1.2rem 'Roboto Condensed'; position: relative; }
+.primary-nav > ul { display: flex; justify-content: space-around; align-content: center; align-items: center; margin: 0 auto; }
+.primary-nav > ul > li { flex: 1 1 auto; text-align: center; padding: 2rem 0; }
 .primary-nav label { color: blue; text-decoration: underline; cursor: pointer; }
 
 .nav-wrapper { display: flex; justify-content: space-between; align-content: center; align-items: center; }
@@ -53,13 +53,6 @@ button, .cta-button { margin: 0 auto; display: block; text-align: center; color:
 .tags { padding-left: 0; }
 .tags li { display: inline-block; background-color: #606060; padding: .25rem; color: white; }
 
-.search { text-align: center; }
-.search label { display: block; text-align: left; }
-.search input, .search button { font-size: 1.5rem; padding: .25rem; border: #333 1px solid; }
-.search input { -webkit-appearance: none; appearance: none; width: 80%; margin: 0; }
-.search button { display: inline-block; width: 4rem; background-color: #222; font-family: 'Roboto Condensed'; outline: none; box-shadow: none; }
-.search p { text-align: left; }
-
 .card-front, .card-mini-view { box-shadow: 1px 1px 2px #333; margin: auto; }
 .card-front h3, .card-front p, .card-front ul, .card-mini-view h3, .card-mini-view p, .card-mini-view ul { margin: 0; }
 
@@ -71,27 +64,83 @@ button, .cta-button { margin: 0 auto; display: block; text-align: center; color:
 .card-front .view-more a:after { content: url("../img/ic_keyboard_arrow_right_black_24px.svg"); display: inline-block; vertical-align: -.5rem; }
 .card-front .show a:after { transform: rotate(90deg); }
 
+.browse { text-align: center; }
+.browse h2 { text-align: left; }
+
 .grid { display: flex; justify-content: center; align-content: center; align-items: center; flex-flow: row wrap; margin-bottom: 1rem; }
 .grid li { padding: 0; flex: 0 1 auto; margin: .5rem; }
-.grid li i { background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; font-size: 4rem; padding: 1rem; }
+.grid li i { background-color: rgba(255, 255, 255, 0.9); border-radius: 15px; font-size: 4rem; padding: 1rem; }
 .grid li:after { content: "cause name"; display: block; }
 
 .hero { display: flex; justify-content: space-between; align-content: center; align-items: center; flex-flow: row nowrap; background: url("../img/ic_panorama_white_24px.svg") no-repeat center/cover; height: 33vh; padding: 0; text-align: center; }
 .hero h1, .hero .listing-title { flex: 1 1 100%; }
 
-.cta ul, .modal ul { margin-top: 0; text-align: center; }
+.cta ul, .modal ul { margin-top: 0; }
 .cta li, .modal li { padding-top: 0; display: inline-block; }
-.cta li:first-child, .modal li:first-child { margin-right: 5rem; }
 
 .cta { position: relative; }
 .cta i, .cta a { color: #333; text-decoration: none; }
 
-input[type="checkbox"]#discover, #discover-2 { position: absolute; left: -9999px; visibility: hidden; }
+input[type="checkbox"]#search, #discover, #discover-2 { position: absolute; left: -9999px; visibility: hidden; }
 
-.modal { visibility: hidden; background-color: #222; position: absolute; right: 0; left: 0; text-align: center; z-index: 10; }
-.modal ul { background-color: #222; }
+.modal { display: none; height: auto; position: absolute; left: 0; right: 0; top: 4rem; background-color: #eee; z-index: 10; padding-top: 2rem; }
 .modal i, .modal a { color: white; text-decoration: none; }
-.modal .close { text-align: right; cursor: pointer; }
+.modal button.close { text-align: right; cursor: pointer; margin-top: 2rem; display: block; width: 100%; background-color: #222; color: white; line-height: 2; text-align: center; }
+
+.clickme { color: blue; text-decoration: underline; cursor: pointer; }
+
+.discover, .search-suggestions, .search-new { text-align: left; padding-left: .5rem; }
+.discover li, .search-suggestions li, .search-new li { display: block; text-transform: uppercase; font-family: 'Roboto Condensed'; font-size: 2rem; }
+
+.discover li { padding-left: .5rem; }
+
+.search { margin-top: 0; text-align: center; }
+.search label { display: block; text-align: left; }
+.search input, .search button { font-size: 1.5rem; }
+.search input { -webkit-appearance: none; appearance: none; width: 85%; margin: 0; padding: .25rem; border: #333 1px solid; }
+.search button { display: inline-block; padding: 0; background-color: transparent; font-family: 'Roboto Condensed'; outline: none; border: 1px solid transparent; box-shadow: none; }
+.search button i { color: #333; vertical-align: bottom; }
+.search p { text-align: left; }
+
+.discovery-row-1:after { content: "8 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-2:after { content: "3 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-3:after { content: "177 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-4:after { content: "108 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-5:after { content: "68 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-6:after { content: "180 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-7:after { content: "31 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-8:after { content: "32 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-9:after { content: "2 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-10:after { content: "72 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-11:after { content: "111 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-12:after { content: "5 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-13:after { content: "97 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-14:after { content: "183 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-15:after { content: "107 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-16:after { content: "65 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-17:after { content: "54 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-18:after { content: "111 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-19:after { content: "144 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
+
+.discovery-row-20:after { content: "120 volunteer activities"; display: block; font-size: 1rem; color: grey; margin-left: 1rem; text-transform: lowercase; }
 
 .cta-modal { top: 0; bottom: 0; }
 
@@ -100,7 +149,7 @@ input[type="checkbox"]:checked ~ .modal { visibility: visible; }
 .listing-title { align-self: flex-end; background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); color: white; }
 .listing-title h3 { margin-top: 0; }
 
-.listing-details { margin: 2px .25rem; background-color: #fbfbfb; padding: 1rem; }
+.listing-details { display: none; margin: 2px .25rem; background-color: #fbfbfb; padding: 1rem; }
 .listing-details ul { margin-top: 0; }
 .listing-details h4 + p { margin-top: 0; }
 
@@ -135,6 +184,9 @@ input[type="checkbox"]:checked ~ .modal { visibility: visible; }
 .learn-how .learn-thumb i { font-size: 8rem; color: rgba(255, 255, 255, 0.8); }
 .learn-how p { flex: 1 1 60%; vertical-align: top; margin: 0; padding-left: .5rem; }
 
+.happening-now { overflow-x: scroll; overflow-y: hidden; height: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; padding: 0; }
+.happening-now li { margin: auto; width: 10rem; display: inline-block; vertical-align: middle; background-color: #333; color: white; padding: 1rem; white-space: normal; }
+
 .profile { text-align: center; }
 .profile i.big { font-size: 50vw; }
 .profile .profile-causes li:after { content: none; }
@@ -161,7 +213,7 @@ input[type="checkbox"]:checked ~ .modal { visibility: visible; }
 
 .back-link { margin: 1rem; display: block; text-align: center; }
 
-.fold-line { border-top: magenta dashed 3px; position: fixed; top: 667px; left: 0; right: 0; height: 100vh; background-color: rgba(0, 0, 0, 0.8); padding-bottom: 100%; z-index: 10; }
+.fold-line { display: none; border-top: magenta dashed 3px; position: fixed; top: 667px; left: 0; right: 0; height: 100vh; background-color: rgba(0, 0, 0, 0.8); padding-bottom: 100%; z-index: 10; }
 
 /* Media Queries */
 /*

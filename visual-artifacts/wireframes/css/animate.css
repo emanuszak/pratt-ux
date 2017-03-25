@@ -1,0 +1,17 @@
+main { overflow: hidden; }
+
+/* Keyframes */
+@keyframes fadeIn { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translate3d(0, 100%, 0); }
+  100% { opacity: 1; transform: none; } }
+@keyframes fadeInRight { 0% { opacity: 0; transform: translate3d(100%, 0, 0); }
+  100% { opacity: 1; transform: none; } }
+/* CSS Page Transitions Don't forget to add vendor prefixes! */
+.animate-wrapper { /** Basic styles for an animated element */ /** An element that fades in */ /** An element that fades in and slides up */ /** An element that fades in and slides from the right */ }
+.animate-wrapper .animate-element { animation-duration: 0.25s; transition-timing-function: ease-in; animation-fill-mode: both; }
+.animate-wrapper .element-fadein { animation-name: fadeIn; }
+.animate-wrapper .element-fadeinup { animation-name: fadeInUp; }
+.animate-wrapper .element-fadeinright { animation-name: fadeInRight; }
+
+/*# sourceMappingURL=animate.css.map */

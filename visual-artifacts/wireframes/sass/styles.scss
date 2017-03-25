@@ -20,8 +20,6 @@ $code: 'Roboto Mono', courier;
 	align-items: center;
 }
 
-
-
 /* Global Styles */
 
 * {
@@ -39,7 +37,7 @@ h1, h2, h3, h4 {
 }
 .wrapper {
 	background-color: white;
-	width: 375px;
+// 	width: 375px;
 	margin: 0 auto;
 	margin-bottom: calc(100vh - 660px);
 	min-height: 100vh;
@@ -49,12 +47,11 @@ ul.no-bullets {
 	padding-left: 0;
 	li {
 		list-style: none;
-		padding-left: 0;
 	}
 }
 section {
 	background-color: $background;
-	padding: 2rem .25rem;
+	padding: 1rem .25rem;
 	&:nth-child(odd) {
 		background-color: darken($background, 10%);
 	}
@@ -104,14 +101,15 @@ button, .cta-button {
 .primary-nav {
 	background-color: $background;
 	font: 1.2rem 'Roboto Condensed';
-	ul {
-		@include flexbox(space-between);
+	position: relative;
+	> ul {
+		@include flexbox(space-around);
 		margin: 0 auto;
-	}
-	li {
-		flex: 1 1 auto;
-		padding: 1rem 0;
-		text-align: center;
+		> li {
+			flex: 1 1 auto;
+			text-align: center;
+			padding: 2rem 0;
+		}
 	}
 	label {
 		color: blue;
@@ -177,35 +175,6 @@ button, .cta-button {
 		color: white;
 	}
 }
-.search {
-	text-align: center;
-	label {
-		display: block;
-		text-align: left;
-	}
-	input, button {
-		font-size: 1.5rem;
-		padding: .25rem;
-		border: $text 1px solid;
-	}
-	input {
-		-webkit-appearance: none;
-		appearance: none;
-		width: 80%;
-		margin: 0;
-		}
-	button {
-		display: inline-block;
-		width: 4rem;
-		background-color: #222;
-		font-family: 'Roboto Condensed';
-		outline: none;
-		box-shadow: none;
-	}
-	p {
-		text-align: left;
-	}
-}
 .card-front, .card-mini-view {
 	box-shadow: 1px 1px 2px #333;
 	margin: auto;
@@ -230,23 +199,29 @@ button, .cta-button {
 			font-size: 6rem;
 			color: $icon;
 		}
-											}
-								.card-details {
+	}
+	.card-details {
 		padding-right: .25rem;
 	}
 	.view-more {
 		text-align: right;
 		margin-top: 1rem;
 		a:after {
-				content: url("../img/ic_keyboard_arrow_right_black_24px.svg");
-				display: inline-block;
-				vertical-align: -.5rem;
-			}
+			content: url("../img/ic_keyboard_arrow_right_black_24px.svg");
+			display: inline-block;
+			vertical-align: -.5rem;
+		}
 	}
 	.show {
 		a:after {
 			transform: rotate(90deg);
 		}
+	}
+}
+.browse {
+	text-align: center;
+	h2 {
+		text-align: left;
 	}
 }
 .grid {
@@ -259,7 +234,7 @@ button, .cta-button {
 		margin: .5rem;
 		i {
 			background-color: rgba(255, 255, 255, .9);
-			border-radius: 50%;
+			border-radius: 15px;
 			font-size: 4rem;
 			padding: 1rem;
 		}
@@ -283,14 +258,10 @@ button, .cta-button {
 .cta, .modal {
 	ul {
 		margin-top: 0;
-		text-align: center;
 	}
 	li {
 		padding-top: 0;
 		display: inline-block;
-		&:first-child {
-			margin-right: 5rem;
-		}
 	}
 }
 .cta {
@@ -300,29 +271,101 @@ button, .cta-button {
 		text-decoration: none;
 	}
 }
-input[type="checkbox"]#discover, #discover-2 {
+input[type="checkbox"]#search, , #discover, #discover-2 {
 	position: absolute;
 	left: -9999px;
 	visibility: hidden;
 }
 .modal {
-	visibility: hidden;
-	background-color: #222;
+	display:none;
+	height: auto;
 	position: absolute;
-	right: 0;
 	left: 0;
-	text-align: center;
+	right: 0;
+	top: 4rem;
+	background-color: $background;
 	z-index: 10;
-	ul {
-		background-color: #222;
-	}
+	padding-top: 2rem;
 	i, a {
 		color: white;
 		text-decoration: none;
 	}
-	.close {
+	button.close {
 		text-align: right;
 		cursor: pointer;
+		margin-top: 2rem;
+		display: block;
+		width: 100%;
+		background-color: #222;
+		color: white;
+		line-height: 2;
+		text-align: center;
+	}
+}
+.clickme {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.discover, .search-suggestions, .search-new {
+	text-align: left;
+	padding-left: .5rem;
+	li {
+		display: block;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed';
+		font-size: 2rem;
+	}
+}
+.discover li {
+	padding-left: .5rem;
+}
+.search {
+	margin-top: 0;
+	text-align: center;
+	label {
+		display: block;
+		text-align: left;
+	}
+	input, button {
+		font-size: 1.5rem;
+	}
+	input {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 85%;
+		margin: 0;
+		padding: .25rem;
+		border: $text 1px solid;
+		}
+	button {
+		display: inline-block;
+		padding: 0;
+		background-color: transparent;
+		font-family: 'Roboto Condensed';
+		outline: none;
+		border: 1px solid transparent;
+		box-shadow: none;
+		i {
+			color: $text;
+			vertical-align: bottom;
+		}
+	}
+	p {
+		text-align: left;
+	}
+}
+
+@for $i from 1 through 20 {
+	.discovery-row-#{$i} {
+		&:after {
+			content: random(200) + " volunteer activities";
+			display: block;
+			font-size: 1rem;
+			color: grey;
+			margin-left: 1rem;
+			text-transform: lowercase;
+		}
 	}
 }
 .cta-modal {
@@ -341,6 +384,7 @@ input[type="checkbox"]:checked ~ .modal {
 	}
 }
 .listing-details {
+	display: none;
 	margin: 2px .25rem;
 	background-color: lighten($background, 5%);
 	padding: 1rem;
@@ -456,6 +500,24 @@ input[type="checkbox"]:checked ~ .modal {
 		padding-left: .5rem;
 	}
 }
+.happening-now {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	padding: 0;
+	li {
+		margin: auto;
+		width: 10rem;
+		display: inline-block;
+		vertical-align: middle;
+		background-color: #333;
+		color: white;
+		padding: 1rem;
+		white-space: normal;
+	}
+}
 .profile {
 	text-align: center;
 	i.big {
@@ -535,6 +597,7 @@ input[type="checkbox"]:checked ~ .modal {
 }
 
 .fold-line {
+	display: none;
 	border-top: magenta dashed 3px;
 	position: fixed;
 	top: 667px;
