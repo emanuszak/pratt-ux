@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+	<link href="css/styles.css" type="text/css" rel="stylesheet">
+	
+	<title>Wireframe</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="global-header">
+			<div class="nav-wrapper">
+				<div class="logo">
+					<h2><a href="index.html">logo</a></h2>
+				</div>
+				<nav class="login-nav">
+					<ul class="no-bullets">
+						<li class="logged-in"><i class="material-icons">account_circle</i></li>
+						<li><a href="#">log out</a></li>
+					</ul>
+				</nav>
+			</div>
+			<nav class="primary-nav">
+				<ul class="no-bullets">
+					<li><a href="index.html#howitworks">How it works</a></li>
+					<li><a href="browse.html">Find causes</a></li>
+					<li>
+						<input type="checkbox" id="discover">
+						<label for="discover">Search</label>
+						<div class="modal header-modal">
+							<label for="discover" class="close"><i class="material-icons">close</i></label>
+							<section class="search header-search">
+								<input type="search" placeholder="I want to volunteer as...">
+								<button type="submit">Search</button>
+							</section>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="profile">
+				<i class="material-icons big">face</i>
+				<p>first.last@gmail.com</p>
+				<p><i>no neighborhood set</i></p>
+				<div class="profile-causes">
+					<h3>Your Causes</h3>
+
+				</div>
+			</section>
+			<nav class="dashboard-nav">
+				<ul class="no-bullets">
+					<li>Upcoming</li>
+					<li>Recommended</li>
+					<li><a href="user-dashboard.html">Edit Profile</a></li>
+				</ul>
+			</nav>
+			
+			<section class="upcoming">
+				<h2><span class="code">h2</span>Upcoming</h2>
+				<p>You have not signed up for any upcoming volunteer events.  </p>
+				<div class="cta">
+					<ul class="no-bullets">
+						<li><a href="#"><i class="material-icons">search</i>search</a></li>
+						<li><a href="#"><i class="material-icons">view_module</i>browse</a></li>
+					</ul>
+				</div> 
+			</section>
+
+			<section class="recommended">
+				<h2><span class="code">h2</span>Recommended for you</h2>
+				<p>Fill out your neighborhood and select the causes you're interested in so that we can deliver recommended events for you. <a href="user-dashboard.html">Edit Profile</a></p>
+			</section>
+			
+		</main>
+		
+		<footer class="global-footer">
+			<hr class="footer-hr">
+			<p>made with &hearts; in nyc</p>
+			<div class="social">
+				<div class="brandico-twitter-bird"></div>
+				<div class="brandico-facebook-rect"></div>
+				<div class="brandico-instagram"></div>
+			</div>
+			<ul class="no-bullets">
+				<li>Home</li>
+				<li>How it works</li>
+				<li>Find volunteering</li>
+				<li>Contact</li>
+				<li>Login</li>
+				<li>Signup</li>
+			</ul>
+			<img src="img/logo-dnainfo.svg">
+		</footer>
+	</div>
+	<div class="fold-line"></div>
+</body>
+
+</html>
